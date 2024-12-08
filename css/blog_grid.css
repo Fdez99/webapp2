@@ -1,0 +1,92 @@
+/* No me convence el "hover" del menú.
+El resto, aparentemente está bien pero creo que el grid
+no ha salido como tenía que salir. */
+
+.nav-cabecera {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr; 
+    justify-items: center;
+    align-items: center;
+}
+
+.nav-cabecera .blog {
+    color: var(--seleccionado);
+}
+
+img {
+    width: 100%;
+}
+
+.sombra {
+    margin: 6rem 3rem;
+    border-radius: 10px;
+
+}
+
+.experiencias h3 {
+    color:var(--secundario-oscuro);
+}
+
+@media (min-width: 768px) {
+    .nav-cabecera {
+        display: grid;
+        grid-template: 1fr / repeat(6, 1fr); 
+        justify-items: center;
+        align-items: center;
+    }
+
+    .nav-cabecera a:hover {
+        width: 100%;
+        background-color: var(--secundario-oscuro);
+        color: var(--blanco);
+    }
+
+    .miblog aside {
+        margin-top: 12rem;
+    }
+
+    .des-objetivo, .arti-experiencias {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .des-objetivo img {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1140px) {
+    .miblog {
+        display: grid;
+        grid-template-areas:
+            "obj ppal ppal ppal ppal ppal ppal exp"
+    } 
+
+    .cursos-comenzados {
+        grid-area: ppal;
+    }
+
+    .objetivo {
+        grid-area: obj;
+    }
+
+    .des-objetivo {
+        display: block;
+    }
+
+    .des-objetivo img {
+        width: 100%;
+    }
+
+    .experiencias {
+        grid-area: exp;
+    }
+    
+    .arti-experiencias {
+        display: block;
+    }
+    
+}
