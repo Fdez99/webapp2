@@ -182,12 +182,68 @@ h1, h2, h3 {
     color: var(--secundario);
 }
 
-.mod-formativos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1rem;
+/* ##################################### */
+/* Módulos formativos -- Examen práctico */
+/* ##################################### */
+
+.contenedor {
+    margin-top: 3rem;
+}
+
+.mod-formativos, .mod-formativos section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mod-formativos h3 {
+    font-weight: var(--forma-principal);
+    color:var(--secundario-oscuro);
+}
+
+.mod-formativos section svg {
+    width: 48px;
+    height: 48px;
+    background-color: var(--secundario);
+    padding: 3rem;
+    border-radius: 50%; /* Se recorta parte del iconito  ??????? */
+    box-sizing: content-box;
 }
 
 footer {
+    margin-top: 6rem;
     text-align: center;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    .contenedor .mod-formativos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .contenedor .mod-formativos section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        margin: 0 2rem;
+        max-width: 42%;
+    }
+}
+
+/* PC y pantallas grandes en general */
+
+@media(min-width: 1140px) {
+    .contenedor .mod-formativos {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .contenedor .mod-formativos section {
+        max-width: 22%;
+    }
 }
