@@ -35,6 +35,10 @@ img {
         align-items: center;
     }
 
+    .nav-cabecera a {
+        width: 100%;
+    }
+
     .nav-cabecera a:hover {
         width: 100%;
         background-color: var(--secundario-oscuro);
