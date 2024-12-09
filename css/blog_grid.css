@@ -1,7 +1,3 @@
-/* No me convence el "hover" del menú.
-El resto, aparentemente está bien pero creo que el grid
-no ha salido como tenía que salir. */
-
 .nav-cabecera {
     display: grid;
     grid-template: repeat(6, 1fr) / 1fr; 

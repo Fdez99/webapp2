@@ -1,3 +1,77 @@
+.nav-cabecera {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr; 
+    justify-items: center;
+    align-items: center;
+}
+
 .nav-cabecera .mas-cursos {
     color: var(--seleccionado);
+}
+
+.contenedor {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contenedor img {
+    width: 100%;
+    box-shadow: 0px 4px 4px -1px rgba(0,0,0,0.75);
+    margin: 1rem;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    .nav-cabecera {
+        display: grid;
+        grid-template: 1fr / repeat(6, 1fr); 
+        justify-items: center;
+        align-items: center;
+    }
+
+    .nav-cabecera a {
+        width: 100%;
+    }
+
+    .otros-cursos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .otros-cursos .aula1, .otros-cursos .aula2, .otros-cursos .aula3 {
+        grid-column: span 2;
+    }
+
+    .otros-cursos .imagen1 {
+        order: 0;
+    }
+
+    .otros-cursos .aula1 {
+        order: 1;
+    }
+
+    .otros-cursos .imagen2, .otros-cursos .imagen2-3 {
+        order: 2;
+    }
+
+    .otros-cursos .aula2 {
+        order: 3;
+    }
+
+    .otros-cursos .imagen3, .otros-cursos .aula3 {
+        order: 4;
+    }
+}
+
+/* PCs y pantallas grandes */
+
+@media (min-width: 1140px) {
+    .otros-cursos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
 }
