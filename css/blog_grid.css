@@ -14,7 +14,7 @@ img {
 }
 
 .sombra {
-    margin: 6rem 3rem;
+    margin: 2rem 2rem;
     border-radius: 10px;
 
 }
@@ -39,10 +39,6 @@ img {
         width: 100%;
         background-color: var(--secundario-oscuro);
         color: var(--blanco);
-    }
-
-    .miblog aside {
-        margin-top: 12rem;
     }
 
     .des-objetivo, .arti-experiencias {
@@ -88,5 +84,8 @@ img {
     .arti-experiencias {
         display: block;
     }
-    
+
+    .miblog aside {
+        margin-top: 12rem;
+    }
 }

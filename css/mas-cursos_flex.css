@@ -1,0 +1,99 @@
+/* P'al móvil */
+
+.nav-cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-cabecera .mas-cursos {
+    color: var(--seleccionado);
+}
+
+.otros-cursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.otros-cursos img {
+    width: 100%;
+    box-shadow: 0px 4px 4px -1px rgba(0,0,0,0.75);
+    margin: 1rem;
+}
+
+/* P'a la tablet */
+
+@media (min-width: 768px) {
+    .nav-cabecera {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .otros-cursos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .otros-cursos img {
+        max-width: 44%;
+    }
+
+    .aula1, .aula2, .aula3 {
+        min-width: 90%;
+    }
+
+    .otros-cursos .imagen1 {
+        order: 0;
+    }
+
+    .otros-cursos .aula1 {
+        order: 1;
+    }
+
+    .otros-cursos .imagen2, .otros-cursos .imagen2-3 {
+        order: 2;
+    }
+
+    .otros-cursos .aula2 {
+        order: 3;
+    }
+
+    .otros-cursos .imagen3, .otros-cursos .aula3 {
+        order: 4;
+    }
+}
+
+/* P'al PC */
+
+@media (min-width: 1140px) {
+    .otros-cursos img {
+        max-width: 30%;
+    }
+
+    .aula1, .aula2, .aula3 {
+        min-width: 60%;
+    }
+
+    .otros-cursos .imagen1 {
+        order: 0;
+    }
+
+    .otros-cursos .aula1 {
+        order: 1;
+    }
+
+    .otros-cursos .imagen2, .otros-cursos .imagen2-3 {
+        order: 2;
+    }
+
+    .otros-cursos .aula2 {
+        order: 3;
+    }
+
+    .otros-cursos .imagen3, .otros-cursos .aula3 {
+        order: 4;
+    }
+}

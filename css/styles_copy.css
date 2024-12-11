@@ -190,10 +190,12 @@ h1, h2, h3 {
     margin-top: 3rem;
 }
 
-.mod-formativos, .mod-formativos section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.mod-formativos {
+    grid-row: span 4;
+    display: grid;
+    grid-template-rows: subgrid;
+    align-items: start;
+
 }
 
 .mod-formativos h3 {
@@ -207,6 +209,7 @@ h1, h2, h3 {
 }
 
 .mod-formativos .iconito {
+    margin: 0 auto;
     background-color: var(--secundario);
     padding: 3rem;
     border-radius: 50%;
@@ -215,6 +218,11 @@ h1, h2, h3 {
 
 .mod-formativos p {
     line-height: 2; /* interlineado */
+}
+
+.mod-formativos .horas {
+    margin: 0;
+    text-align: start;
 }
 
 footer {
@@ -226,18 +234,10 @@ footer {
 
 @media (min-width: 768px) {
     .contenedor .mod-formativos {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-
-    .contenedor .mod-formativos section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-        margin: 0 2rem;
-        max-width: 42%;
+        display: grid;
+        column-gap: 1rem;
+        grid-template-columns: (2, 1fr);
+        grid-template-rows: auto 1fr auto auto;
     }
 }
 
@@ -245,12 +245,8 @@ footer {
 
 @media(min-width: 1140px) {
     .contenedor .mod-formativos {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .contenedor .mod-formativos section {
-        max-width: 22%;
-    }
+
 }
