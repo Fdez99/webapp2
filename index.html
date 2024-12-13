@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App2</title>
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Hojas de estilo con su preload y eso -->
+    <link rel="preload" href="css/styles.css" as="style"> 
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_inicio.css">
+    <link rel="preload" href="css/formulario.css" as="style">
+    <link rel="stylesheet" href="css/formulario.css">
     <link rel="preload" href="css/normalize.css" as="style"> 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preload" href="css/styles.css" as="style"> 
-    <link rel="stylesheet" href="css/styles_copy.css">
-    <link rel="stylesheet" href="css/styles_inicio.css">
-</head>
+  </head>
 <body>
     <header>
         <h1 class="cabecera">curso de aplicaciones web <span>academia épsilon</span></h1>
@@ -25,7 +29,7 @@
             <a class="instalaciones" href="instalaciones.html">instalaciones</a>
             <a class="nosotros" href="nosotros.html">nosotros</a>
             <a class="blog" href="blog.html">blog</a>
-            <a class="contacto" href="#">contacto</a>
+            <a class="contacto" href="index.html#formulario">contacto</a>
         </nav>
     </div>
 
@@ -52,7 +56,7 @@
               <path d="M9 18l0 .01" />
             </svg>
             <p>Fuengirola, Málaga</p>
-            <a class="boton" href="#">contactar</a>
+            <a class="boton" href="#formulario">contactar</a>
         </div>
     </section>
     
@@ -159,6 +163,79 @@
                 <p class="horas">150 hrs.</p>
             </section>    
         </div>
+
+        <section>
+          <h2 id="formulario">Formulario de contacto</h2>
+          <form action="" class="formulario">
+            <fieldset>
+              <legend>Solicítanos información enviando este formulario</legend>
+              <div class="campo-formulario">
+                <label for="nombre">nombre</label> <!-- for "mismo nombre del input "-->
+                <input id="nombre" class="input-formulario" name="nombre" type="text" placeholder="Tu nombre"></input>
+              </div>
+              <div class="campo-formulario">
+                <label for="email">email</label>
+                <input id="email" class="input-formulario" name="email" type="email" placeholder="Tu correo"></input>
+              </div>
+              <div class="campo-formulario">
+                <label for="telefono">teléfono</label>
+                <input id="telefono" class="input-formulario" name="telefono" type="tel" placeholder="Tu teléfono"></input>
+              </div>
+              <div class="campo-formulario">
+                <label for="estalabo">estado laboral</label>
+                <input id="estalabo" list="labos" class="input-formulario" name="estalabo" type="text" placeholder="Tu situación laboral"></input> <!-- Puedes poner el texto que quieras y se enviará así; la lista da ideas de lo que puedes poner -->
+                <datalist id="labos">
+                  <option value="Desempleado">
+                  <option value="Trabajo fijo">
+                  <option value="Trabajo temporal">
+                  <option value="Trabajo fijo discontinuo">
+                </datalist>
+              </div>
+              <div class="campo-formulario">
+                <label for="tipoinfo">Tipo de información</label>
+                <select name="tipoinfo" id="tipoinfo" class="input-formulario">
+                  <option value="" disabled selected>Pincha aquí para seleccionar una opción</option> <!-- Entre las etiquetas, lo que se ve; en value, lo que se envía. Por defecto, la primera opción es el placeholder. Con disabled evitamos que se pueda seleccionar. Lo de selected es para que se muestre. -->
+                  <optgroup label="Cursos">
+                    <option value="encurso">Cursos comenzados</option>
+                    <option value="nourso">Próximos cursos</option>
+                  </optgroup>
+                  <optgroup label="Trabajo">
+                    <option value="soltrabajo">Solicitud de trabajo</option>
+                    <option value="practicas">Interesado en prácticas</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="campo-formulario">
+                <label>Selecciona preferencia para contactarte</label>
+                <div class="prefes">
+                  <input type="radio" id="prtel" name="contacto" value="prtel">
+                  <label for="prtel">teléfono</label>
+                  <input type="radio" id="premail" name="contacto" value="premail">
+                  <label for="premail">e-mail</label>
+                </div>
+              </div>
+              <div class="campo-formulario">
+                <label>Selecciona tus campos de interés</label>
+                <div class="interes">
+                  <input type="checkbox" id="ofimatica" name="ofimatica">
+                  <label for="ofimatica">Ofimática</label>
+                  <input type="checkbox" id="contabilidad" name="contabilidad">
+                  <label for="contabilidad">Contabilidad</label>
+                  <input type="checkbox" id="hosteleria" name="hosteleria">
+                  <label for="hosteleria">Hostelería</label>
+                  <input type="checkbox" id="seguridad" name="seguridad">
+                  <label for="seguridad">Seguridad</label>
+                </div>
+              </div class="campo-formulario">
+                <!-- <label>Escribe tu mensaje</label> Usaremos el placeholder -->
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+              </div>
+              <div class="flex derecha">
+                <input type="submit" class="boton" value="Enviar">
+              </div>
+            </fieldset>
+          </form>
+        </section>
     </main>
 
     <footer>

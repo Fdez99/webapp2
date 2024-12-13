@@ -27,6 +27,8 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Efecto bonico */
+    scroll-snap-type: y mandatory; /* Control del desplazamiento del scroll */
 }
 
 *,*:before,*:after {box-sizing: inherit;}
@@ -207,6 +209,7 @@ h1, h2, h3 {
 }
 
 .mod-formativos .iconito {
+	margin: 0 auto;
     background-color: var(--secundario);
     padding: 3rem;
     border-radius: 50%;
