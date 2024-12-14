@@ -28,7 +28,9 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth; /* Efecto bonico */
+    /* Control del scroll */
     scroll-snap-type: y mandatory; /* Control del desplazamiento del scroll */
+    scroll-padding: 0;
 }
 
 *,*:before,*:after {box-sizing: inherit;}
@@ -38,7 +40,12 @@ body {
     font-size: 16px;
     font-family: var(--fuente-principal);
 }
-/*-----------*/
+
+/* Puntos de fijación del scroll */
+header, .cabecera-fondo, .mod-formativos, #formulario, footer {
+    scroll-snap-align: start;
+    scroll-margin: 0;
+}
 
 .contenedor {
     max-width: 120rem;
