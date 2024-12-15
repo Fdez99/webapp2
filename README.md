@@ -1,2 +1,7 @@
 # webapp2
-Primera web medio decente del curso de Desarrollo de Aplicaciones Web (uso de HTML, CSS y mucho maquetar con Flex y Grid). Hay fotos, iconos con fondo redondo y hasta un formulario taco bonito. ❤️
+Primera web medio decente del curso de Desarrollo de Aplicaciones Web utilizando:
+    🎨 Aplicación de estilos con CSS
+    ⏹ Maquetación con flex y grid
+    🔳 Uso de subgrid para organizar elementos
+    🖼 Imágenes alineadas
+    📝 Creación de la estructura de un formulario
