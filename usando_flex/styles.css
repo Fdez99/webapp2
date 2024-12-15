@@ -199,11 +199,11 @@ h1, h2, h3 {
     margin-top: 3rem;
 }
 
-/* .mod-formativos, .mod-formativos section {
+.mod-formativos, .mod-formativos section {
     display: flex;
     flex-direction: column;
     align-items: center;
-} */
+}
 
 .mod-formativos h3 {
     font-weight: var(--forma-principal);
@@ -235,7 +235,7 @@ footer {
 /* Tablet */
 
 @media (min-width: 768px) {
-    /* .contenedor .mod-formativos {
+    .contenedor .mod-formativos {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -248,33 +248,23 @@ footer {
         box-sizing: border-box;
         margin: 0 2rem;
         max-width: 42%;
-    } */
+    }
+
+    .boton {
+        max-width: 20%;
+    }
 }
 
 /* PC y pantallas grandes en general */
 
-@media(min-width: 768px) {
-    /* .contenedor .mod-formativos {
+@media(min-width: 1140px) {
+    .contenedor .mod-formativos {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
-    } */
-
-    .contenedor .mod-formativos {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        grid-template-rows: repeat(4, auto);
     }
 
-    /* .contenedor .mod-formativos section {
-        max-width: 22%;
-    } */
-
     .contenedor .mod-formativos section {
-        display: grid;
-        grid-template-rows: subgrid;
-        grid-row: 1 / 5;
-        text-align: center;
+        max-width: 22%;
     }
 }
