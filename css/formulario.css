@@ -84,3 +84,14 @@
 .derecha {
     justify-content: end;
 }
+
+@media(max-width: 1140px) {
+    .interes {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .interes label {
+        max-width: 50%;
+    }
+}
