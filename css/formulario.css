@@ -93,5 +93,6 @@
 
     .interes label {
         max-width: 50%;
+        margin: 0;
     }
 }
